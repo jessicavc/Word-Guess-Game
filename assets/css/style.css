@@ -1,0 +1,16 @@
+.jumbotron {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    background-image: url(../images/space.jpeg);
+}
+
+.content {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+
+#underscores {
+    text-align:center;
+    font-size: 50px;
+}
+
