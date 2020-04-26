@@ -7,8 +7,7 @@
     <title>Star Trek Word Guess</title>
     <!-- Style Sheets -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/javascript" href="assets/javascript/game.js">
+    <!--link rel="stylesheet" type="text/css" href="assets/css/reset.css"-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Raleway&display=swap"
@@ -16,50 +15,61 @@
 </head>
 
 <body>
-    <!-- JUMBOTRON -->
-    <div class="jumbotron">
-        <h1 class="image"></h1>
+    <!-- HEADER-->
+    <header class="container">
         <div class="col-lg-12 d-flex justify-content-center">
-            <img src="assets/images/Star-Trek-Captains.jpeg" width="700px">
+            <img src="assets/images/Star-Trek-Captains.jpeg" class="image responsive border" width="700px">
         </div>
         <div class="row d-flex justify-content-center border-1">
             <h2 class="text-center md-2">PRESS ANY KEY TO ENGAGE</h2>
         </div>
-    </div>
+    </header>
 
-<!-- CONTENTS -->
-    <content class="content">
-    <div class="col-sm-t text-center border">
-        <div>Current Word</div>
-        <br>
-        <div id="underscores">_ _ _ _ _ _</div>
-        <br>
-        <div>Number of Guesses Remaining</div>
-        <br>
-        <div id="guessesRemaining"></div>
-        <br>
-        <div>Letters Already Played</div>
-        <br>
-        <div id="guessesPlayed"></div>
-        <br>
-        <div>MAKE IT SO!</div>
-        <div id="makeitso"></div>
-        <br>
-        <div>RED ALERT!</div>
-        <br>
-        <div id="redalert"></div>
+    <!-- CONTENTS -->
+    <content class="container">
+        <div class="row mt-2">
+
+            <div class="col-sm-6 text-center border">
+                <div>Current Word:</div>
+                <div id="underscores"></div>
+                <div>
+                    Guesses Remaining:
+                    <div id="guessesRemaining"></div>
+                </div>
+                <br>
+                Letters Played:
+                <div id="alreadyPlayed"></div>
+                <br>
+                <div>
+                    Wins:
+                    <div id="wins"></div><br>
+                </div>
+                <div>
+                    Total Losses:
+                    <p id="losses"></p>
+                </div>
+                <br>
+            </div>
+
+            <!-- HINTS -->
+            <div class="col text-center border">
+                Clues
+                <br>
+                <img id="image" src="assets/images/">
+                <div>
+                    <p id="questions"></p>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
     </content>
 
-<!-- HINTS -->
-    <div class="col-sm-6 text-center border">
-        <div>Tricorder Log</div>
-        <div id="tricorder"></div>
-        <img id="image" src="#">
-    </div>
-
     <!-- BOOTSTRAP SCRIPTS -->
 
+    <script src="assets/javascript/game.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

@@ -1,16 +1,23 @@
-.jumbotron {
-    font-family: 'Orbitron', sans-serif;
-    color: white;
+body {
     background-image: url(../images/space.jpeg);
 }
 
-.content {
-    font-family: 'Raleway', sans-serif;
-    font-size: 25px;
+.container {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+
+.responsive {
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    height:auto; 
 }
 
 #underscores {
     text-align:center;
-    font-size: 50px;
+    font-size: 30px;
 }
 
