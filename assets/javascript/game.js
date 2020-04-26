@@ -9,7 +9,6 @@ var computerGuess = "";
 var letters = [];
 var totalBlanks = 0;
 var underscore = [];
-var wrongGuess = []
 
 //counter variables
 var wins = 0;
@@ -124,7 +123,7 @@ function checkLetters(letter){
     // wrong guess get added to lettersPlayed array
     //decrease guessesRemaining.
     else {
-        lettersPlayed.push(wrongGuess);
+        lettersPlayed.push(letter);
         guessesRemaining--;
     }
 }
@@ -154,11 +153,13 @@ function Reset() {
     wordGuess()
 }
 
+console.log('Letters played', lettersPlayed);
+
 
 //adding to the DOM
     document.getElementById("underscores").innerHTML = underscore.join(" ");
-    document.getElementById("numberofGuesses").innerHTML = " " + guessesRemaining;
-    document.getElementById("wrongGuess").innerHTML = " " + lettersPlayed.join(" ");
+    document.getElementById("guessesRemaining").innerHTML = " " + guessesRemaining;
+    document.getElementById("alreadyPlayed").innerHTML = " " + lettersPlayed.join(" ");
 
 }
 

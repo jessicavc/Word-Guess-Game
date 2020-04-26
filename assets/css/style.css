@@ -7,6 +7,7 @@ body {
     font-size: 20px;
     font-weight: bolder;
     color: white;
+    overflow: auto;
 }
 
 .responsive {
