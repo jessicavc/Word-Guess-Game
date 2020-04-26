@@ -38,9 +38,8 @@ function wordGuess() {
     //updating the DOM with underscores matching length of words
     document.getElementById("underscores").innerHTML = " " + underscore.join(" ");
 
-    // console.log(computerGuess);
 
-    //if/else statements to give hints to users that includes pictures of each place
+    //if/else statements to give hints to users. includes pictures
 
     //annika
     if (computerGuess === answers[0]){
@@ -122,8 +121,8 @@ function checkLetters(letter){
         }
     }  
 
-    //wrong letter choices get added to lettersPlayed array
-    //decrease the guesses remaining each time the user guesses.
+    // wrong guess get added to lettersPlayed array
+    //decrease guessesRemaining.
     else {
         lettersPlayed.push(wrongGuess);
         guessesRemaining--;
