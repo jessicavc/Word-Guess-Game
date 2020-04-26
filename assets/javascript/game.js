@@ -1,8 +1,10 @@
 //computer choices for words
-var answers = ["annika", "spot", "picard", "pike", "bones", "roddenberry", "futile", "baseball", "doctor", "coffee"];
+var answers = ["annika", "spot", "picard", "pike", "bones", "roddenberry", "futile", "baseball", "doctor", "coffee", "vulcans", "sanfrancisco", "tiberius", "captainproton", "acquisition", "tribbles", "klingon", "chocolate", "quark", "trill"];
 
 var questions = ["What is Seven of Nine's human name?", "What is Data name his cat?", "What is the last name of the Captain of the Enterprise-D?", "Who was the first captain to appear in the Star Trek franchise? (Hint: Currently on Discovery)", "What is Dr. Leonard McCoy's nickname?",
-    "Star Trek creator: Gene _______________ ", "We are borg. Resistance is ___________. Prepare to be Assimilated.", "What is Benjamin Sisko's favorite sport?", "What is the name of the EMH (Emergency Medical Hologram) on Voyager?", "Famous quote by Kathryn Janeway: 'Theres ________ in that nebula!'"];
+    "Star Trek creator: Gene _______________ ", "We are borg. Resistance is ___________. Prepare to be Assimilated.", "What is Benjamin Sisko's favorite sport?", "What is the name of the EMH (Emergency Medical Hologram) on Voyager?", "Famous quote by Kathryn Janeway: 'Theres ________ in that nebula!'",
+    "Which alien race made first contact with Earth?", "In what city is Starfleet Command located?", "What does the 'T' in James T. Kirk stand for?", "Tom Paris writes a black and white superhero holonovel. Who is the protagonist?", "Ferengi abide by the 'Rule of ____________'", "Famous episode 'The Trouble with _________'",
+    "Which Star Trek language is most popularly used IRL?", "What is Deanna Troi's comfort food?", "Who is the bartender on Deep Space Nine?", "Which human species lives symbiotically with a wise, long-lived creature called a symbiant?"];
 
 //global variables
 var computerGuess = "";
@@ -91,6 +93,66 @@ function wordGuess() {
         document.getElementById("image").src = "assets/images/janeway.jpg";
     }
 
+    //vulcans
+    else if (computerGuess === answers[10]) {
+        document.getElementById("questions").innerHTML = " " + questions[10];
+        document.getElementById("image").src = "assets/images/vulcan.jpg";
+    }
+
+    //san francisco
+    else if (computerGuess === answers[11]) {
+        document.getElementById("questions").innerHTML = " " + questions[11];
+        document.getElementById("image").src = "assets/images/san-francisco.jpg";
+    }
+
+    //tiberius
+    else if (computerGuess === answers[12]) {
+        document.getElementById("questions").innerHTML = " " + questions[12];
+        document.getElementById("image").src = "assets/images/kirk.jpg";
+    }
+
+    //captain proton
+    else if (computerGuess === answers[13]) {
+        document.getElementById("questions").innerHTML = " " + questions[13];
+        document.getElementById("image").src = "assets/images/captain-proton.jpg";
+    }
+
+    //acquisition
+    else if (computerGuess === answers[14]) {
+        document.getElementById("questions").innerHTML = " " + questions[14];
+        document.getElementById("image").src = "assets/images/acquisition2.jpg";
+    }
+
+    //tribbles
+    else if (computerGuess === answers[15]) {
+        document.getElementById("questions").innerHTML = " " + questions[15];
+        document.getElementById("image").src = "assets/images/tribbles.jpg";
+    }
+
+    //klingon
+    else if (computerGuess === answers[16]) {
+        document.getElementById("questions").innerHTML = " " + questions[16];
+        document.getElementById("image").src = "assets/images/klingon.jpg";
+    }
+
+    //chocolate
+    else if (computerGuess === answers[17]) {
+        document.getElementById("questions").innerHTML = " " + questions[17];
+        document.getElementById("image").src = "assets/images/troi.jpg";
+    }
+
+    //quark
+    else if (computerGuess === answers[18]) {
+        document.getElementById("questions").innerHTML = " " + questions[18];
+        document.getElementById("image").src = "assets/images/quark.jpg";
+    }
+
+    //trill
+    else if (computerGuess === answers[19]) {
+        document.getElementById("questions").innerHTML = " " + questions[19];
+        document.getElementById("image").src = "assets/images/dax.jpg";
+    }
+
 }
 //call game function
 wordGuess()
@@ -153,13 +215,13 @@ function end() {
         wordGuess()
     }
 
-    console.log('Letters played', lettersPlayed);
+    //console.log('Letters played', lettersPlayed);
 
 
     //adding to the DOM
     document.getElementById("underscores").innerHTML = underscore.join(" ");
     document.getElementById("guessesRemaining").innerHTML = " " + guessesRemaining;
-    document.getElementById("alreadyPlayed").innerHTML = " " + lettersPlayed.join(" ");
+    document.getElementById("lettersPlayed").innerHTML = " " + lettersPlayed.join(" ");
 
 }
 
