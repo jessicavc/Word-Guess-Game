@@ -108,7 +108,7 @@ function wordGuess() {
     //tiberius
     else if (computerGuess === answers[12]) {
         document.getElementById("questions").innerHTML = " " + questions[12];
-        document.getElementById("image").src = "assets/images/kirk2.jpg";
+        document.getElementById("image").src = "assets/images/kirk.jpeg";
     }
 
     //captain proton
