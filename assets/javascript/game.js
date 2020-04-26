@@ -9,32 +9,33 @@ var computerGuess = "";
 var letters = [];
 var totalBlanks = 0;
 var underscore = [];
-var wrongGuess = [];
+var wrongGuess = []
 
 //counter variables
 var wins = 0;
 var losses = 0;
 var guessesRemaining = 10;
+var lettersPlayed = [];
 
 
 //start game function
 
 function wordGuess() {
-    //computer chooses random word from destinations array
+    //computer chooses random word 
     computerGuess = answers[Math.floor(Math.random() * answers.length)];
 
-    //split words into separate array and store in a different array
+    //split and store words in separate array
     letters = computerGuess.split("");
 
-    //need the length of each word for the correct underscore display
+    //word length = amount of spaces
     totalBlanks = letters.length;
 
-    //for loop to give underscores for each letter in the array
+    //for loop to match underscores to word length
     for (var i=0; i < totalBlanks; i++){
         underscore.push("_");
     }
 
-    //updating the DOM with underscores of correct length
+    //updating the DOM with underscores matching length of words
     document.getElementById("underscores").innerHTML = " " + underscore.join(" ");
 
     // console.log(computerGuess);
@@ -121,23 +122,23 @@ function checkLetters(letter){
         }
     }  
 
-    //wrong letter choices get added to wrong guess array and will show letters guessed on the screen.
+    //wrong letter choices get added to lettersPlayed array
     //decrease the guesses remaining each time the user guesses.
     else {
-        alreadyPlayed.push(letter);
+        lettersPlayed.push(wrongGuess);
         guessesRemaining--;
     }
 }
 
 
-//game completion function
+//game end function
 
 function end(){
     if (letters.toString() == underscore.toString()){
         wins++;
         alert ("You really know your Trek!");
         Reset();
-        document.getElementById("rightGuess").innerHTML = wins;
+        document.getElementById("wins").innerHTML = wins;
     } else if (guessesRemaining === 0){
         losses++;
         alert ("Mr. Spock says: This is highly illogical");
@@ -145,10 +146,10 @@ function end(){
         document.getElementById("losses").innerHTML = losses;
     }
 
-//game reset after every win/loss
+//game reset after each word
 
 function Reset() {
-    wrongGuess = [];
+    lettersPlayed = [];
     underscore = [];
     guessesRemaining = 10;
     wordGuess()
@@ -158,7 +159,7 @@ function Reset() {
 //adding to the DOM
     document.getElementById("underscores").innerHTML = underscore.join(" ");
     document.getElementById("numberofGuesses").innerHTML = " " + guessesRemaining;
-    document.getElementById("wrongGuess").innerHTML = " " + wrongGuess.join(" ");
+    document.getElementById("wrongGuess").innerHTML = " " + lettersPlayed.join(" ");
 
 }
 
