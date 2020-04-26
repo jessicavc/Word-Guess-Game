@@ -124,7 +124,7 @@ function checkLetters(letter){
     //wrong letter choices get added to wrong guess array and will show letters guessed on the screen.
     //decrease the guesses remaining each time the user guesses.
     else {
-        wrongGuess.push(letter);
+        alreadyPlayed.push(letter);
         guessesRemaining--;
     }
 }
